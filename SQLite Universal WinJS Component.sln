@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SQLiteUniversalWinJS", "SQLiteUniversalWinJS\SQLiteUniversalWinJS.vcxproj", "{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinRT Javascript Helper Files", "WinRT Javascript Helper Files", "{1A9C8BDB-F834-46CC-B8A3-32B8228A69F1}"
+	ProjectSection(SolutionItems) = preProject
+		WinRT Javascript Helper Files\SQLiteHelper.js = WinRT Javascript Helper Files\SQLiteHelper.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|ARM.Build.0 = Debug|ARM
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|x64.ActiveCfg = Debug|x64
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|x64.Build.0 = Debug|x64
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|x86.ActiveCfg = Debug|Win32
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Debug|x86.Build.0 = Debug|Win32
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|ARM.ActiveCfg = Release|ARM
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|ARM.Build.0 = Release|ARM
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|x64.ActiveCfg = Release|x64
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|x64.Build.0 = Release|x64
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|x86.ActiveCfg = Release|Win32
+		{63EA21AA-F709-4D20-B200-9B5DCDC5C53A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
