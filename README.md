@@ -17,6 +17,10 @@ where you go to Projects, and enable the _SQLiteUniversalWinJS_ project as a ref
 Finally, copy the JavaScript file _SQLiteHelper.js_ from the _WinRT Javascript Helper Files_ folder to the _js_ folder in your solution's
 main project, and reference it in your _default.html_ file to use it.
 
+#### Dependencies
+This component uses the *SQLite for Universal App Platform* extension, by the SQLite Development Team.
+(Current version = 3.8.11.1)
+
 ## Usage
 
 One custom JavaScript method in _SQLiteHelper.js_ is _checkDatabaseAsync(databaseFolder, databaseFileName)_, which, will check
