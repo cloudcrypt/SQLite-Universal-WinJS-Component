@@ -20,6 +20,7 @@ main project, and reference it in your _default.html_ file to use it.
 #### Dependencies
 This component uses the *SQLite for Universal App Platform* extension, by the SQLite Development Team.
 (Current version = 3.8.11.1)
+The extension is **required** for the component to work.
 
 ## Usage
 
@@ -51,18 +52,16 @@ function createDB() {
   SQLite.Database.openDatabaseInFolderAsync(Windows.Storage.ApplicationData.current.roamingFolder, "BookDB.sqlite").then(
       function (openedOrCreatedDatabase) {
           database = openedOrCreatedDatabase;
-          return SdkSample.executeStatementsAsTransactionAsync(database, [
+          return executeStatementsAsTransactionAsync(database, [
               "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY UNIQUE, title TEXT, authorid INTEGER);",
               "CREATE TABLE IF NOT EXISTS authors (id INTEGER PRIMARY KEY UNIQUE, name TEXT);",
               "CREATE TABLE IF NOT EXISTS checkout (id INTEGER PRIMARY KEY UNIQUE, status INTEGER);"
           ]);
       }).then(function () {
-          if (SdkSample.database) {
-              SdkSample.database.close();
-              SdkSample.database = null;
+          if (database) {
+              database.close();
+              database = null;
           }
-          SdkSample.database = database;
-          database = null;
       },
       function (err) {
           if (database) {
