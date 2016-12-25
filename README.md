@@ -19,7 +19,7 @@ main project, and reference it in your _default.html_ file to use it.
 
 #### Dependencies
 This component uses the *SQLite for Universal App Platform* extension, by the SQLite Development Team.
-(Current version = 3.8.11.1)
+(Current version = 3.15.2)
 The extension is **required** for the component to work.
 
 ## Usage
