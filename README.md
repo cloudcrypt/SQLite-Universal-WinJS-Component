@@ -44,6 +44,7 @@ checkDatabaseAsync().then(function () {
 });
 ```
 <br>
+
 ```javascript
 function createDB() {
   // Create the request to open the database, named BookDB. If it doesn't exist, create it.
@@ -51,27 +52,28 @@ function createDB() {
 
   SQLite.Database.openDatabaseInFolderAsync(Windows.Storage.ApplicationData.current.roamingFolder, "BookDB.sqlite").then(
       function (openedOrCreatedDatabase) {
-          database = openedOrCreatedDatabase;
-          return executeStatementsAsTransactionAsync(database, [
-              "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY UNIQUE, title TEXT, authorid INTEGER);",
-              "CREATE TABLE IF NOT EXISTS authors (id INTEGER PRIMARY KEY UNIQUE, name TEXT);",
-              "CREATE TABLE IF NOT EXISTS checkout (id INTEGER PRIMARY KEY UNIQUE, status INTEGER);"
-          ]);
+	  database = openedOrCreatedDatabase;
+	  return executeStatementsAsTransactionAsync(database, [
+	      "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY UNIQUE, title TEXT, authorid INTEGER);",
+	      "CREATE TABLE IF NOT EXISTS authors (id INTEGER PRIMARY KEY UNIQUE, name TEXT);",
+	      "CREATE TABLE IF NOT EXISTS checkout (id INTEGER PRIMARY KEY UNIQUE, status INTEGER);"
+	  ]);
       }).then(function () {
-          if (database) {
-              database.close();
-              database = null;
-          }
+	  if (database) {
+	      database.close();
+	      database = null;
+	  }
       },
       function (err) {
-          if (database) {
-              database.close();
-              database = null;
-          }
-          WinJS.log && WinJS.log("Database open failure: " + err, "sample", "error");
+	  if (database) {
+	      database.close();
+	      database = null;
+	  }
+	  WinJS.log && WinJS.log("Database open failure: " + err, "sample", "error");
       });
 }
 ```
+
 ## Credits
 This is a port of the Windows 8.1 Component by Dave Risney found at https://code.msdn.microsoft.com/windowsapps/Universal-JavaScript-5728abdb
 <br>
